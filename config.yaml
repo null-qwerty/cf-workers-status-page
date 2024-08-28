@@ -27,21 +27,21 @@ monitors:
   - id: blog-null-qwerty.work
     name: blog.null-qwerty.work
     description: '个人博客-国内优化/备用'
-    url: 'https://blog.null-qwerty.work'
+    url: 'https://blog.null-qwerty.work/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
   - id: images-null-qwerty-top
     name: 图床
-    url: 'https://images.null-qwerty.top/'
+    url: 'https://images.null-qwerty.top/large_evcg11c.png'
     method: GET
-    expectStatus: 404
-    linkable: false
+    expectStatus: 200
+    linkable: true
 
   - id: images-null-qwerty-work
     name: 图床-国内优化/备用
-    url: 'https://images.null-qwerty.work/'
+    url: 'https://images.null-qwerty.work/large_evcg11c.png'
     method: GET
-    expectStatus: 404
-    linkable: false
+    expectStatus: 200
+    linkable: true
