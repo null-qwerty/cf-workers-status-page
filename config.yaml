@@ -1,6 +1,6 @@
 settings:
   title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  url: 'https://status.null-qwerty.top' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -15,25 +15,33 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: www-null-qwerty-top # unique identifier
+    name: www.null-qwerty.top
+    description: '个人博客' # default=empty
+    url: 'https://www.null-qwerty.top/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: blog-null-qwerty.work
+    name: blog.null-qwerty.work
+    description: '个人博客-国内优化/备用'
+    url: 'https://blog.null-qwerty.work'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: images-null-qwerty-top
+    name: 图床
+    url: 'https://images.null-qwerty.top/'
     method: GET
-    expectStatus: 200
+    expectStatus: 404
+    linkable: false
+
+  - id: images-null-qwerty-work
+    name: 图床-国内优化/备用
+    url: 'https://images.null-qwerty.work/'
+    method: GET
+    expectStatus: 404
+    linkable: false
