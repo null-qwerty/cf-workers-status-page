@@ -52,4 +52,3 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: false
-    
