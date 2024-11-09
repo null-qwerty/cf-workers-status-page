@@ -51,4 +51,5 @@ monitors:
     url: 'https://waline.null-qwerty.work'
     method: GET
     expectStatus: 200
-    linkable: true
+    linkable: false
+    
