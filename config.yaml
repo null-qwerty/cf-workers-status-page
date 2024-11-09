@@ -45,3 +45,10 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true
+
+  - id: waline-null-qwerty-work
+    name: 评论系统
+    url: 'https://waline.null-qwerty.work'
+    method: GET
+    expectStatus: 200
+    linkable: true
